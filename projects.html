@@ -1,45 +1,47 @@
-<!-- projects.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Projects</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>My Portfolio</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="skills.html">Skills & Education</a>
-                <a href="projects.html">Projects</a>
-            </nav>
-        </header>
 
-        <section>
-            <h2>Projects</h2>
-            <div class="projects-gallery">
-                <a href="dosa-diner.html" class="project">
-                    <img src="DOSA.png" alt="Dosa Diner Project">
-                    <div class="overlay">Dosa Diner (Scratch Game)</div>
-                </a>
-                <a href="ripples.html" class="project">
-                    <img src="P5JS.png" alt="Ripples Project">
-                    <div class="overlay">Ripples (P5.JS Project)</div>
-                </a>
-                <a href="please-try-again.html" class="project">
-                    <img src="PleaseTryAgain.png" alt="Please Try Again Project">
-                    <div class="overlay">Please Try Again (Short Film)</div>
-                </a>
-            </div>
-        </section>
+    <!-- Navigation -->
+    <nav class="fade-in">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+    </nav>
 
-        <footer>
-            &copy; 2024 Pavithrasri Poornachandran. All rights reserved.
-        </footer>
+    <!-- Divider Below Navigation -->
+    <hr class="divider fade-in">
+
+    <!-- Projects Section -->
+    <section class="projects fade-in">
+        <div class="project" data-embed="scratch">
+            <img src="DOSA.png" alt="Dosa Diner">
+            <span>Dosa Diner: Scratch</span>
+        </div>
+        <div class="project fade-in" data-embed="p5js">
+            <img src="P5JS.png" alt="Ripples">
+            <span>Ripples: p5.js</span>
+        </div>
+        <div class="project fade-in" data-embed="youtube">
+            <img src="PleaseTryAgain.png" alt="Please Try Again">
+            <span>Please Try Again: Skit</span>
+        </div>
+    </section>
+
+    <!-- Overlay Container -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="close">&times;</span>
+            <div id="embed-placeholder">Embed Placeholder</div>
+        </div>
     </div>
+
 </body>
 </html>

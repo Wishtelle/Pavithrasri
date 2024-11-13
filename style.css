@@ -1,120 +1,228 @@
-/* style.css */
-
-
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffe4e6;
-    color: #333;
+    font-family: serif;
+    background-color: #f5f2eb;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    background-image: 
-        linear-gradient(90deg, #ffe4e6 25%, white 25%, white 50%, #ffe4e6 50%, #ffe4e6 75%, white 75%, white);
-    background-size: 70px 70px;
+    color: #333;
 }
 
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: #d28d8f;
-}
-
+/* Navigation Styles */
 nav {
     text-align: center;
-    margin: 20px 0;
+    padding: 1em 0;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 1em;
+    color: black;
     text-decoration: none;
-    color: #d28d8f;
-    font-weight: bold;
+    font-size: 1.2em;
+    font-family: Georgia, serif;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav a:hover {
-    color: #a96c6e;
+    color: rgb(219, 179, 170);
+    text-shadow: 0px 0px 10px white;
 }
 
-h2 {
-    color: #d28d8f;
-    margin-bottom: 10px;
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
 
-.section-content {
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #777;
-    padding: 20px 0;
-}
-
-/* Project Gallery Styles */
-
-.projects-gallery {
+/* Each image in the banner */
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.3s ease-out;
+}
+
+/* Images inside the banner */
+.banner-image img {
+    width: 105%;
+    height: auto; /* Make sure they scale properly */
+    object-fit: cover;
+}
+
+/* Overlay image for name */
+.name-overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-overlay img {
+    max-width: 80%;  /* Adjust the max width of the overlay image */
+    height: auto;
+}
+
+/* Introduction Container */
+.intro-container {
+    width: 90%;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Contact Container */
+.contact-container {
+    width: 90%;
+    margin: 2em auto;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    height: 80vh; /* Adjust based on your preferred height */
 }
 
 .project {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 30%; /* Adjust width to take up more of the screen */
+    height: 70%; /* Adjust height */
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .project img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
-.project .overlay {
+.project span {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect to show text */
+.project:hover img {
+    transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+.project:hover span {
+    opacity: 1; /* Text will appear when hovering */
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(210, 141, 143, 0.8); /* Light pink overlay */
-    color: white;
-    font-size: 1.1em;
-    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+}
+
+.overlay-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 
-.project:hover img {
-    opacity: 0.3; /* Dim image on hover */
+.overlay-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-.project:hover .overlay {
-    opacity: 1; /* Show overlay text on hover */
+/* Fade In and Out Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.6s forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Styling the Divider */
+.divider {
+    border: none;
+    border-top: 2px solid #c7b7b0; /* Thicker gray line */
+    margin-bottom: 30px 0;
+    width: 60%;  /* Reduced width to 60% of the page */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.divider:before {
+    content: "⋆";
+    font-size: 2rem;
+    color: #995f7a;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -0.75rem; /* Adjust the positioning as necessary */
+}
+/* Apply blur effect to the first banner image */
+#image1 img {
+    filter: blur(3px); /* Adjust the blur value as needed */
 }
