@@ -16,7 +16,8 @@ body {
 /* Navigation Styles */
 nav {
     position: absolute;
-    right: 20px; /* Adjusts distance from the right */
+    right: 20px; 
+    top: 50px;
     color: white;
     display: flex;
     font-family: Georgia, serif;
@@ -226,27 +227,32 @@ nav a:hover {
     filter: blur(3px); /* Adjust the blur value as needed */
 }
 
+/* Ensure skill-item is positioned relative for absolute children */
+.skill-item {
+    position: relative;
+}
+
 /* Hover effect on skill items */
-.skill-item:hover {
+.skill-item:hover img{
     transform: scale(1.1);
-    filter: brightness(0.5); /* Darken the image */
+    filter: brightness(0.8); 
 }
 
 /* Make sure text is bright on hover */
 .skill-item:hover .app-name {
     opacity: 1;
-
 }
 
-/* App name text */
 .app-name {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1em;
+    font-size: 1.2em; /* Increase font size */
+    font-weight: bold; /* Bold for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add shadow for contrast */
     opacity: 0;
     transition: opacity 0.3s;
-    z-index: 3; /* Ensure text is on top */
+    z-index: 1; /* Ensure text is on top */
 }
