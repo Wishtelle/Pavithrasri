@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Try Again</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+       /* This style applies ONLY on the Projects page */
+       nav {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-family: Georgia, serif;
+            color: #ff6347; /* Example: change color to tomato */
+        }
+
+        nav a {
+            margin: 0 1em;
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.2); /* Make the link bigger on hover */
+            color: #d7afbf; /* Hover color: change to gold */
+        }
+
+        .video-container {
+            width: 80vw;
+            max-width: 900px; /* Restrict the video size */
+            margin: 100px auto; /* Center the video */
+            border: 2px solid #995f7a; /* Match border color */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff5f5; /* Light background for the video container */
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 5px;
+        }
+
+      
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fade-in" style="position: absolute; top: 30px; font-family: Georgia, serif; color: #995f7a; z-index: 1000;">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+    </nav>
+
+    <!-- Please Try Again Project Content -->
+    <h1> </h1>
+    
+    <!-- Embed the video directly in HTML -->
+    <div class="video-container ">
+        <iframe src="https://www.youtube.com/embed/B4iXEbNzwPw" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

@@ -6,42 +6,67 @@
     <title>Projects</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <style>
+        /* This style applies ONLY on the Ripples page */
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-family: Georgia, serif;
+            color: #ff6347; /* Example: change color to tomato */
+        }
+
+        nav a {
+            margin: 0 1em;
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.2); /* Make the link bigger on hover */
+            color: #d7afbf; /* Hover color: change to gold */
+        }
+
+        
+    </style>
+
 </head>
-<body>
+<body class="projects-page">
 
     <!-- Navigation -->
-    <nav class="fade-in">
+    <nav class="fade-in" style="position: absolute; top: 60px; text-align: center; right: 20px; font-size: 1em; font-family: Georgia, serif; color: #995f7a;">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
         <a href="projects.html">Projects</a>
     </nav>
 
-    <!-- Divider Below Navigation -->
-    <hr class="divider fade-in">
+    
 
-    <!-- Projects Section -->
-    <section class="projects fade-in">
-        <div class="project" data-embed="scratch">
-            <img src="DOSA.png" alt="Dosa Diner">
-            <span>Dosa Diner: Scratch</span>
+     <!-- Projects Section -->
+     <section class="projects fade-in">
+        <div class="project">
+            <a href="dosa-diner.html">
+                <img src="DOSA.png" alt="Dosa Diner">
+                <span>Dosa Diner: Scratch</span>
+            </a>
         </div>
-        <div class="project fade-in" data-embed="p5js">
-            <img src="P5JS.png" alt="Ripples">
-            <span>Ripples: p5.js</span>
+        <div class="project">
+            <a href="ripples.html">
+                <img src="P5JS.png" alt="Ripples">
+                <span>Ripples: p5.js</span>
+            </a>
         </div>
-        <div class="project fade-in" data-embed="youtube">
-            <img src="PleaseTryAgain.png" alt="Please Try Again">
-            <span>Please Try Again: Skit</span>
+        <div class="project">
+            <a href="please-try-again.html">
+                <img src="PleaseTryAgain.png" alt="Please Try Again">
+                <span>Please Try Again: Skit</span>
+            </a>
         </div>
     </section>
 
-    <!-- Overlay Container -->
-    <div id="overlay" class="overlay">
-        <div class="overlay-content">
-            <span class="close">&times;</span>
-            <div id="embed-placeholder">Embed Placeholder</div>
-        </div>
-    </div>
+
 
 </body>
 </html>
