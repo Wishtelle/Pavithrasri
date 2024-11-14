@@ -16,7 +16,6 @@ body {
 /* Navigation Styles */
 nav {
     position: absolute;
-    top: 60px; /* Adjusts distance from the top */
     right: 20px; /* Adjusts distance from the right */
     color: white;
     display: flex;
