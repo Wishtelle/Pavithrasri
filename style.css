@@ -221,25 +221,7 @@ nav a:hover {
     }
 }
 
-/* Styling the Divider */
-.divider {
-    border: none;
-    border-top: 2px solid #c7b7b0; /* Thicker gray line */
-    margin-bottom: 1px 0;
-    width: 60%;  /* Reduced width to 60% of the page */
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
 
-.divider:before {
-    content: "⋆";
-    font-size: 5rem;
-    color: #995f7a;
-    position: absolute;
-    left: 50%;
-    top: -0.75rem; /* Adjust the positioning as necessary */
-}
 /* Apply blur effect to the first banner image */
 #image1 img {
     filter: blur(3px); /* Adjust the blur value as needed */
